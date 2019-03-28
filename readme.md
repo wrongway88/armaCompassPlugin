@@ -2,6 +2,13 @@ ARMA 3 Compass Plugin
 
 This is part of my ARMA 3 desktop compass project. This is the game plugin, it periodically sends out compass direction via Socket for the Compass Server to receive.
 
+Use Pre-built:
+
+Just copy the folder '@compass_client' into your ARMA 3 root directory
+
+
+Build yourself:
+
 This project consists of two parts: the game mod and a .dll
 
 Check this tutorial to build the game mod
