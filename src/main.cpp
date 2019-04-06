@@ -8,6 +8,7 @@
 #include <vector>
 #include <iterator>
 #include <sstream>
+#include <thread>
 
 #include <winsock2.h>
 #include <ws2tcpip.h>
@@ -134,7 +135,9 @@ int __stdcall RVExtensionArgs(char* output, int outputSize, const char* function
 	{
 		if (argsCnt >= 1)
 		{
-			updateCompass(atof(args[0]));
+			double direction = atof(args[0]);
+			
+			std::thread(updateCompass, direction).detach();
 
 			strncpy_s(output, outputSize, "updating compass", _TRUNCATE);
 		}
